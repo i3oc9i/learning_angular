@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, model, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,14 +9,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './search-bar.component.css',
 })
 export class SearchBarComponent {
-  @Input() search = 'Initial'; //  search "two-way binding" to the parent component
-  @Output() searchChange = new EventEmitter<string>(); //  searchChamge "two-way binding" to the parent component
+  search = model('Pikaciu'); //  search "two-way binding" to the parent component
 
-  updateSearch(value: string) {
-    this.searchChange.emit(value);
-  }
-
-  @Output('submit') searchButtonClicked = new EventEmitter<void>();
+  searchButtonClicked = output<void>({ alias: 'submit' });
 
   searchClick() {
     this.searchButtonClicked.emit();
