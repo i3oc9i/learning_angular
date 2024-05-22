@@ -1,5 +1,5 @@
 <div id="search-bar">
-  <app-search-bar (searchButtonClicked)="increaseCount()" />
+  <app-search-bar (submit)="increaseCount()" [(search)]="search" />
 </div>
 
 <div id="card-list">
@@ -7,4 +7,7 @@
   <app-playing-card [my.monster]="monster2" />
 </div>
 
-<div id="click-counter">Clicked Count: {{ count }}</div>
+<div id="click-counter">
+  Search: {{ search }}<br />
+  Clicked Count: {{ count }}
+</div>

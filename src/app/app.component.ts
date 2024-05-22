@@ -15,6 +15,7 @@ export class AppComponent {
   monster2!: Monster;
 
   count: number = 0;
+  search: string = '';
 
   constructor() {
     this.monster1 = new Monster();
