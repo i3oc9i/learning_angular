@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-playing-card',
@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
 })
 
 export class PlayingCardComponent {
-  name: string = "My Monster";
-	hp: number = 40;
-	figureCaption: string = "N°001 Monster"
-	attackName: string = "Geo Impact"
-	attackStrength: number = 60;
-	attackDescription: string = "This is a long description of a monster capacity.";
+  @Input() name: string = "My Monster";
+  @Input() hp: number = 40;
+  @Input() figureCaption: string = "N°001 Monster"
+  @Input() attackName: string = "Geo Impact"
+  @Input() attackStrength: number = 60;
+  @Input() attackDescription: string = "This is a long description of a monster capacity.";
 }
