@@ -14,8 +14,8 @@ export class AppComponent {
   monster1!: Monster;
   monster2!: Monster;
 
-  count: number = 0;
-  search: string = '';
+  search_counter: number = 0;
+  search_value: string = '';
 
   constructor() {
     this.monster1 = new Monster();
@@ -30,6 +30,6 @@ export class AppComponent {
   }
 
   increaseCount() {
-    this.count++;
+    this.search_counter++;
   }
 }
