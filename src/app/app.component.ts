@@ -6,9 +6,6 @@ import { PlayingCardComponent } from './components/playing-card/playing-card.com
   standalone: true,
   imports: [PlayingCardComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-
-export class AppComponent {
-
-}
+export class AppComponent {}
