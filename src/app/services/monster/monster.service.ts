@@ -33,13 +33,13 @@ export class MonsterService {
   }
 
   private figureCaption(id: number, name: string): string {
-    return 'N° ' + id.toString().padStart(3, '0') + ' ' + name;
+    return `N°  ${id.toString().padStart(3, '0')}  ${name}`;
   }
 
   private init() {
     this.monsters = [];
 
-    let monster;
+    let monster: Monster;
 
     monster = new Monster();
     monster.id = this.currentId++;

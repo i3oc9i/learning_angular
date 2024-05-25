@@ -1,8 +1,8 @@
 export enum MonsterType {
-  PLANT = 'plant',
-  ELECTRIC = 'electric',
-  FIRE = 'fire',
-  WATER = 'water',
+  PLANT,
+  ELECTRIC,
+  FIRE,
+  WATER,
 }
 
 export interface IMonsterProperties {
@@ -10,7 +10,9 @@ export interface IMonsterProperties {
   color: string;
 }
 
-export const MonsterTypeProperties: { [key: string]: IMonsterProperties } = {
+export const MonsterTypeProperties: {
+  [key in MonsterType]: IMonsterProperties;
+} = {
   [MonsterType.PLANT]: {
     imageUrl: 'assets/img/pow_plant.png',
     color: 'rgba(135, 255, 124)',
